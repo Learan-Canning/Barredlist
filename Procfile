@@ -1,1 +1,1 @@
-web: gunicorn barredlist.wsgiweb: gunicorn barredlist.wsgi
+web: gunicorn barredlist.wsgi 
