@@ -1,10 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponse
-from django.contrib import messages
+from django.views import generic
 from .models import Post
 
 
 # Create your views here.
-def home(request):
-    return HttpResponse("Welcome to the Barred List Home Page!")
-
+class PostList(generic.ListView):
+    queryset = Post.objects.all()
+    template_name = "post_list.html"

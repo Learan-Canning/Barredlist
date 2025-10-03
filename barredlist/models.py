@@ -22,6 +22,7 @@ class Post(models.Model):
         ordering = ['-created_on']
     def __str__(self):
         return f"Title: {self.title} | Incident Reported by: {self.author}"
+    
 
 # Comment model
 class Comment(models.Model):
