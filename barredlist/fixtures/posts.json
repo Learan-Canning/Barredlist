@@ -1,0 +1,212 @@
+[
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Security Alert: John Mitchell Barred from The Crown & Anchor Pub",
+            "slug": "security-alert-john-mitchell-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>John Mitchell - Barred from The Crown & Anchor Pub</b></p><p>Mr. Mitchell, aged 34, has been officially barred from The Crown & Anchor Pub following multiple incidents of disruptive behavior and harassment of staff members.</p>",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "excerpt": "John Mitchell has been barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Sarah Thompson Barred from The Crown & Anchor Pub",
+            "slug": "sarah-thompson-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Sarah Thompson - Barred from The Crown & Anchor Pub</b></p><p>Ms. Thompson, aged 28, has been permanently barred from The Crown & Anchor Pub following aggressive behavior and multiple incidents.</p>",
+            "created_on": "2023-07-14T14:00:47.759Z",
+            "status": 1,
+            "excerpt": "Sarah Thompson permanently barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T09:41:53.636Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Michael Rodriguez Barred from The Crown & Anchor Pub",
+            "slug": "michael-rodriguez-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Michael Rodriguez - Barred from The Crown & Anchor Pub</b></p><p>Mr. Rodriguez, aged 45, has been barred from The Crown & Anchor Pub following repeated violations of pub conduct policies.</p>",
+            "created_on": "2023-07-14T14:01:24.838Z",
+            "status": 1,
+            "excerpt": "Michael Rodriguez barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-29T12:55:25.717Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Emma Watson Barred from The Crown & Anchor Pub",
+            "slug": "emma-watson-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Emma Watson - Barred from The Crown & Anchor Pub</b></p><p>Ms. Watson, aged 31, has been barred from The Crown & Anchor Pub following multiple incidents of aggressive behavior and vandalism.</p>",
+            "created_on": "2023-09-04T13:51:34.009Z",
+            "status": 1,
+            "excerpt": "Emma Watson barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T09:31:59.441Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "David Chen Barred from The Crown & Anchor Pub",
+            "slug": "david-chen-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>David Chen - Barred from The Crown & Anchor Pub</b></p><p>Mr. Chen, aged 39, has been barred from The Crown & Anchor Pub following repeated incidents and unsanitary behavior.</p>",
+            "created_on": "2023-09-04T13:59:56.703Z",
+            "status": 1,
+            "excerpt": "David Chen barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T09:29:48.494Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Lisa Johnson Barred from The Crown & Anchor Pub",
+            "slug": "lisa-johnson-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Lisa Johnson - Barred from The Crown & Anchor Pub</b></p><p>Ms. Johnson, aged 27, has been barred from The Crown & Anchor Pub following multiple incidents and harassment of staff.</p>",
+            "created_on": "2023-09-04T14:09:27.860Z",
+            "status": 1,
+            "excerpt": "Lisa Johnson barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-29T12:54:00.941Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Robert Williams Barred from The Crown & Anchor Pub",
+            "slug": "robert-williams-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Robert Williams - Barred from The Crown & Anchor Pub</b></p><p>Mr. Williams, aged 52, has been barred from The Crown & Anchor Pub following repeated incidents of aggressive behavior toward staff.</p>",
+            "created_on": "2023-09-04T14:13:08.280Z",
+            "status": 1,
+            "excerpt": "Robert Williams barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T09:23:11.313Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Amanda Foster Barred from The Crown & Anchor Pub",
+            "slug": "amanda-foster-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Amanda Foster - Barred from The Crown & Anchor Pub</b></p><p>Ms. Foster, aged 33, has been permanently barred from The Crown & Anchor Pub following multiple incidents of attempted theft.</p>",
+            "created_on": "2023-09-06T10:55:41.904Z",
+            "status": 1,
+            "excerpt": "Amanda Foster permanently barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T09:16:09.224Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Kevin Murphy Barred from The Crown & Anchor Pub",
+            "slug": "kevin-murphy-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Kevin Murphy - Barred from The Crown & Anchor Pub</b></p><p>Mr. Murphy, aged 41, has been barred from The Crown & Anchor Pub following concerning behavior and inappropriate conduct.</p>",
+            "created_on": "2023-09-06T11:01:28.582Z",
+            "status": 1,
+            "excerpt": "Kevin Murphy permanently barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-29T12:52:06.068Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Patricia Davis Barred from The Crown & Anchor Pub",
+            "slug": "patricia-davis-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Patricia Davis - Barred from The Crown & Anchor Pub</b></p><p>Ms. Davis, aged 36, has been barred from The Crown & Anchor Pub following multiple incidents of property damage and harassment.</p>",
+            "created_on": "2023-09-06T11:06:34.893Z",
+            "status": 1,
+            "excerpt": "Patricia Davis permanently barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-29T12:48:14.784Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Thomas Anderson Barred from The Crown & Anchor Pub",
+            "slug": "thomas-anderson-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Thomas Anderson - Barred from The Crown & Anchor Pub</b></p><p>Mr. Anderson, aged 29, has been barred from The Crown & Anchor Pub following incidents of harassment and trespassing.</p>",
+            "created_on": "2023-09-06T11:07:26.655Z",
+            "status": 1,
+            "excerpt": "Thomas Anderson permanently barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T08:53:53.837Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Maria Gonzalez Barred from The Crown & Anchor Pub",
+            "slug": "maria-gonzalez-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Maria Gonzalez - Barred from The Crown & Anchor Pub</b></p><p>Ms. Gonzalez, aged 25, has been barred from The Crown & Anchor Pub following repeated disruptions and aggressive behavior.</p>",
+            "created_on": "2023-09-06T11:08:40.404Z",
+            "status": 1,
+            "excerpt": "Maria Gonzalez barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T08:52:36.557Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Christopher Lee Barred from The Crown & Anchor Pub",
+            "slug": "christopher-lee-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Christopher Lee - Barred from The Crown & Anchor Pub</b></p><p>Mr. Lee, aged 44, has been barred from The Crown & Anchor Pub following aggressive behavior toward staff and payment issues.</p>",
+            "created_on": "2023-09-06T11:15:40.883Z",
+            "status": 1,
+            "excerpt": "Christopher Lee barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T08:50:49.144Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Jennifer White Barred from The Crown & Anchor Pub",
+            "slug": "jennifer-white-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Jennifer White - Barred from The Crown & Anchor Pub</b></p><p>Ms. White, aged 38, has been barred from The Crown & Anchor Pub following repeated harassment of customers.</p>",
+            "created_on": "2023-09-06T11:18:40.495Z",
+            "status": 0,
+            "excerpt": "Jennifer White barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T08:45:35.403Z"
+        }
+    },
+    {
+        "model": "barredlist.post",
+        "pk": null,
+        "fields": {
+            "title": "Daniel Brown Barred from The Crown & Anchor Pub",
+            "slug": "daniel-brown-barred-from-crown-anchor-pub",
+            "author": 1,
+            "content": "<p><b>Daniel Brown - Barred from The Crown & Anchor Pub</b></p><p>Mr. Brown, aged 30, has been barred from The Crown & Anchor Pub following aggressive behavior and harassment.</p>",
+            "created_on": "2023-09-06T11:20:20.336Z",
+            "status": 0,
+            "excerpt": "Daniel Brown barred from The Crown & Anchor Pub.",
+            "updated_on": "2023-09-13T08:47:31.725Z"
+        }
+    }
+]
