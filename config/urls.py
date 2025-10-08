@@ -21,6 +21,6 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("summernote/", include('django_summernote.urls')),
-    path("", include("barredlist.urls"), name="barredlist-urls"),
-    path("about/", include("about.urls"), name="about-urls"),
+    path("about/", include("about.urls"), name="about-urls"),  # Add this BEFORE barredlist
+    path("", include("barredlist.urls"), name="barredlist-urls"),  # This should be LAST
 ]
