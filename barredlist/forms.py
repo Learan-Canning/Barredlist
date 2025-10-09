@@ -1,5 +1,6 @@
 from django import forms
-from .models import Comment, Reaction
+from .models import Comment, Reaction 
+
 
 # ...existing code...
 
@@ -15,3 +16,4 @@ class ReactionForm(forms.ModelForm):
         widgets = {
             'reaction_type': forms.RadioSelect(),
         }
+
