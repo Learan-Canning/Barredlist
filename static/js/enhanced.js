@@ -12,19 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 5000);
 
-    // Loading state for buttons
+    // Loading state for buttons - ensure form submission isn't blocked
     const buttons = document.querySelectorAll('.btn[type="submit"]');
     buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const originalText = this.innerHTML;
-            this.innerHTML = '<i class="fas fa-spinner fa-spin me-2" aria-hidden="true"></i>Processing...';
-            this.disabled = true;
-            
-            // Re-enable after 3 seconds as fallback
-            setTimeout(() => {
-                this.innerHTML = originalText;
-                this.disabled = false;
-            }, 3000);
+        button.addEventListener('click', function(e) {
+            // Don't prevent form submission
+            const form = this.closest('form');
+            if (form && form.checkValidity()) {
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin me-2" aria-hidden="true"></i>Processing...';
+                this.disabled = true;
+                
+                // Re-enable after 5 seconds as fallback (longer timeout for server response)
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.disabled = false;
+                }, 5000);
+            }
         });
     });
 
