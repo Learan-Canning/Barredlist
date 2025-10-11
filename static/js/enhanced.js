@@ -1,0 +1,92 @@
+// Enhanced BarredList JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Auto-dismiss alerts after 5 seconds
+    setTimeout(function() {
+        const alerts = document.querySelectorAll('.alert:not(.alert-warning)');
+        alerts.forEach(function(alert) {
+            if (bootstrap.Alert) {
+                const bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            }
+        });
+    }, 5000);
+
+    // Loading state for buttons
+    const buttons = document.querySelectorAll('.btn[type="submit"]');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin me-2" aria-hidden="true"></i>Processing...';
+            this.disabled = true;
+            
+            // Re-enable after 3 seconds as fallback
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.disabled = false;
+            }, 3000);
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Image lazy loading fallback
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = '/static/images/placeholder.svg';
+            this.alt = 'Image not available';
+        });
+    });
+
+    // Enhanced tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Form validation feedback
+    const forms = document.querySelectorAll('.needs-validation');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    });
+
+    // Back to top button
+    const backToTopButton = document.createElement('button');
+    backToTopButton.innerHTML = '<i class="fas fa-chevron-up" aria-hidden="true"></i>';
+    backToTopButton.className = 'btn btn-primary position-fixed bottom-0 end-0 m-3 rounded-circle d-none';
+    backToTopButton.style.zIndex = '1050';
+    backToTopButton.setAttribute('aria-label', 'Back to top');
+    backToTopButton.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.appendChild(backToTopButton);
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove('d-none');
+        } else {
+            backToTopButton.classList.add('d-none');
+        }
+    });
+
+    console.log('BarredList enhanced features loaded successfully!');
+});
