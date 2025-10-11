@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Login</title>
+</head>
+<body>
+    <h1>Simple Test Login</h1>
+    
+    {% if error %}
+        <div style="color: red; background: #ffe6e6; padding: 10px; margin: 10px 0;">
+            Error: {{ error }}
+        </div>
+    {% endif %}
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div>
+            <label>Username:</label>
+            <input type="text" name="username" required>
+        </div>
+        <br>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password" required>
+        </div>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    
+    <p>Test credentials: testuser / testpass123</p>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            console.log('Form is submitting!');
+        });
+        
+        document.querySelector('button').addEventListener('click', function(e) {
+            console.log('Button was clicked!');
+        });
+    </script>
+</body>
+</html>

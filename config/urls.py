@@ -17,11 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from barredlist.test_views import test_login
 
 urlpatterns = [
     path("about/", include("about.urls"), name="about-urls"),  # Add this BEFORE barredlist
     path("accounts/", include("allauth.urls")),
     path("admin/", admin.site.urls),
     path("summernote/", include('django_summernote.urls')),
+    path("test-login/", test_login, name="test-login"),  # Simple test login
     path("", include("barredlist.urls"), name="barredlist-urls"),  # This should be LAST
 ]
