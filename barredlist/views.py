@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from requests import post
 from .models import Post, Comment, Reaction 
-from .forms import CommentForm
+from .forms import CommentForm, ReactionForm
 
 
 # Create your views here.
@@ -31,6 +31,21 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    
+    # Get reaction counts
+    reaction_counts = {}
+    from .models import REACTION_TYPES
+    for reaction_type, label in REACTION_TYPES:
+        count = post.reactions.filter(reaction_type=reaction_type).count()
+        reaction_counts[label] = count
+    
+    # Check if user has already reacted
+    user_reaction = None
+    if request.user.is_authenticated:
+        try:
+            user_reaction = Reaction.objects.get(post=post, user=request.user)
+        except Reaction.DoesNotExist:
+            user_reaction = None
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -46,6 +61,7 @@ def post_detail(request, slug):
 
     
     comment_form = CommentForm()  # Create empty form for GET requests
+    reaction_form = ReactionForm()
 
     return render(
         request,
@@ -55,6 +71,9 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "reaction_form": reaction_form,
+            "reaction_counts": reaction_counts,
+            "user_reaction": user_reaction,
         }
     )
 def comment_edit(request, slug, comment_id):
@@ -78,7 +97,40 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-def comment_delete(request, slug, comment_id):
+
+
+def post_reaction(request, slug):
+    """
+    Add or update a reaction to a post
+    """
+    if request.method == "POST" and request.user.is_authenticated:
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        reaction_form = ReactionForm(data=request.POST)
+        
+        if reaction_form.is_valid():
+            reaction_type = reaction_form.cleaned_data['reaction_type']
+            
+            # Check if user already has a reaction for this post
+            try:
+                existing_reaction = Reaction.objects.get(post=post, user=request.user)
+                existing_reaction.reaction_type = reaction_type
+                existing_reaction.save()
+                messages.add_message(request, messages.SUCCESS, 'Reaction updated!')
+            except Reaction.DoesNotExist:
+                # Create new reaction
+                reaction = reaction_form.save(commit=False)
+                reaction.post = post
+                reaction.user = request.user
+                reaction.save()
+                messages.add_message(request, messages.SUCCESS, 'Reaction added!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error adding reaction!')
+    
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def comment_edit(request, slug, comment_id):
     """
     view to delete comment
     """

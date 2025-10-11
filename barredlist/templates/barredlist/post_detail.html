@@ -97,6 +97,50 @@
                         </div>
                     </div>
                 </article>
+                
+                <!-- Reaction Section -->
+                {% if user.is_authenticated %}
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="h6 mb-0">
+                            <i class="fas fa-thumbs-up me-2" aria-hidden="true"></i>
+                            Community Reactions
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Reaction Counts -->
+                        <div class="row text-center mb-3">
+                            {% for label, count in reaction_counts.items %}
+                            <div class="col-3">
+                                <div class="reaction-count">
+                                    <div class="fs-4 fw-bold text-primary">{{ count }}</div>
+                                    <small class="text-muted">{{ label }}</small>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                        <!-- Your Reaction -->
+                        <form method="POST" action="{% url 'post_reaction' post.slug %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label class="form-label"><strong>Your reaction:</strong></label>
+                                {% if user_reaction %}
+                                <p class="text-success mb-2">
+                                    <i class="fas fa-check me-1" aria-hidden="true"></i>
+                                    You reacted: {{ user_reaction.get_reaction_type_display }}
+                                </p>
+                                {% endif %}
+                                {{ reaction_form.reaction_type }}
+                            </div>
+                            <button type="submit" class="btn btn-info btn-sm">
+                                <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>
+                                {% if user_reaction %}Update Reaction{% else %}Add Reaction{% endif %}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                {% endif %}
             </div>
 
             <!-- Sidebar -->
