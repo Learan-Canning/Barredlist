@@ -57,7 +57,7 @@ a:hover {
 }
 
 .brand {
-    color: var(--primary-color);
+    color: var(--white);
     font-weight: 700;
 }
 
@@ -67,7 +67,7 @@ a:hover {
 
 .thin {
     font-weight: 300;
-    color: var(--gray-dark);
+    color: var(--gray-light);
     font-size: 0.9rem;
 }
 
