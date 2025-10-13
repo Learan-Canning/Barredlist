@@ -201,7 +201,9 @@ Includes branding, copyright, and social links.
 
 ### ⚡ Performance
 Tested using **Google Lighthouse** for desktop & mobile.  
-> _Screenshots of Lighthouse results go here._
+<img width="916" height="875" alt="image" src="https://github.com/user-attachments/assets/af3cf88e-6246-4a81-aae5-b0bde4dfb337" />
+
+
 
 ### 🌍 Browser Compatibility
 ✅ Chrome  
@@ -224,7 +226,7 @@ Tested using **Google Lighthouse** for desktop & mobile.
 <img width="1879" height="579" alt="html pass" src="https://github.com/user-attachments/assets/54485e7d-0546-4f68-9755-39a41087272f" />
 
 
-| CSS | W3C Validator | ✅ Passed, With one error (Doesnt effect Performance) |
+| CSS | W3C Validator | ✅ Passed, With 1, boostrap error. (Doesnt effect Performance) |
 
 > _Validation screenshots can be added here._
 <img width="1887" height="462" alt="css validator - `1 bootstrap error" src="https://github.com/user-attachments/assets/d26e64c1-9660-4aa3-a261-d7ec6130e027" />
