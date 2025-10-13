@@ -276,8 +276,11 @@ Tested using **Google Lighthouse** for desktop & mobile.
 - Add config vars:  
   - `DATABASE_URL`  
   - `SECRET_KEY`  
-  - `CLOUDINARY_URL`  
+  - `CLOUDINARY_URL`
   - `PORT=8000`
+---
+<img width="1269" height="785" alt="heroku deploy" src="https://github.com/user-attachments/assets/7eb752b2-18b4-4a37-9b69-ce1f86217e8a" />
+ 
 
 ### 3️⃣ Final Deployment
 ```bash
