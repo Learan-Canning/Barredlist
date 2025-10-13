@@ -7,8 +7,9 @@ It enables staff to create, view, and manage incident reports while fostering co
 
 🔗 **Live Site:** [https://barredlist-fae77b6e4587.herokuapp.com/](https://barredlist-fae77b6e4587.herokuapp.com/)
 ---
+<img width="1300" height="579" alt="image" src="https://github.com/user-attachments/assets/b38c5f67-03da-4123-b3c1-3de68bdad029" />
 
-<img width="1916" height="908" alt="computerdisplay-" src="https://github.com/user-attachments/assets/84c344fa-af67-48a2-aefc-a904dce82179" />
+
 
 ---
 
