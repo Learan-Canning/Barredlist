@@ -2,8 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from requests import post
-from .models import Post, Comment, Reaction 
+from .models import Post, Comment, Reaction
 from .forms import CommentForm, ReactionForm
 
 
@@ -12,6 +11,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "barredlist/index.html"
     paginate_by = 6
+
 
 def post_detail(request, slug):
     """
@@ -49,7 +49,7 @@ def post_detail(request, slug):
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():  # This needs to be indented under the POST check
+        if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user
             comment.post = post
@@ -59,7 +59,6 @@ def post_detail(request, slug):
                 'Comment submitted and awaiting approval'
             )
 
-    
     comment_form = CommentForm()  # Create empty form for GET requests
     reaction_form = ReactionForm()
 
@@ -76,6 +75,8 @@ def post_detail(request, slug):
             "user_reaction": user_reaction,
         }
     )
+
+
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -92,9 +93,13 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.add_message(
+                request, messages.SUCCESS, 'Comment Updated!'
+            )
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!'
+            )
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -113,19 +118,27 @@ def post_reaction(request, slug):
             
             # Check if user already has a reaction for this post
             try:
-                existing_reaction = Reaction.objects.get(post=post, user=request.user)
+                existing_reaction = Reaction.objects.get(
+                    post=post, user=request.user
+                )
                 existing_reaction.reaction_type = reaction_type
                 existing_reaction.save()
-                messages.add_message(request, messages.SUCCESS, 'Reaction updated!')
+                messages.add_message(
+                    request, messages.SUCCESS, 'Reaction updated!'
+                )
             except Reaction.DoesNotExist:
                 # Create new reaction
                 reaction = reaction_form.save(commit=False)
                 reaction.post = post
                 reaction.user = request.user
                 reaction.save()
-                messages.add_message(request, messages.SUCCESS, 'Reaction added!')
+                messages.add_message(
+                    request, messages.SUCCESS, 'Reaction added!'
+                )
         else:
-            messages.add_message(request, messages.ERROR, 'Error adding reaction!')
+            messages.add_message(
+                request, messages.ERROR, 'Error adding reaction!'
+            )
     
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -135,13 +148,15 @@ def comment_delete(request, slug, comment_id):
     view to delete comment
     """
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    get_object_or_404(queryset, slug=slug)  # Verify post exists
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!'
+        )
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
