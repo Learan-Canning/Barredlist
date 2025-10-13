@@ -62,7 +62,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" 
-                               href="{% url 'home' %}" aria-current="{% if request.path == home_url %}page{% endif %}">
+                               href="{% url 'home' %}"{% if request.path == home_url %} aria-current="page"{% endif %}>
                                <i class="fas fa-home me-1" aria-hidden="true"></i>
                                <span>Home</span>
                             </a>
@@ -93,7 +93,7 @@
                         {% else %}
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
-                               href="{% url 'account_signup' %}" aria-current="{% if request.path == signup_url %}page{% endif %}">
+                               href="{% url 'account_signup' %}"{% if request.path == signup_url %} aria-current="page"{% endif %}>
                                <i class="fas fa-user-plus me-1" aria-hidden="true"></i>
                                <span>Register</span>
                             </a>
