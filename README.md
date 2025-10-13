@@ -117,7 +117,8 @@ Handles authentication and permissions.
 **CollaborateRequest**
 - `name`, `email`, `message`, `read`
 
-> _ERD diagram image would be placed here._
+
+<img width="914" height="686" alt="erd" src="https://github.com/user-attachments/assets/fd1485e9-15ca-4276-a084-cb4587b03235" />
 
 ---
 
