@@ -45,9 +45,9 @@ It enables staff to create, view, and manage incident reports while fostering co
 ---
 
 ### 🧩 Wireframes
-> _Wireframes for homepage, post details, login/signup forms, and mobile views would appear here._
+<img width="771" height="635" alt="wireframes" src="https://github.com/user-attachments/assets/1241bf72-ceb5-44e7-a134-7102ad9bf751" />
 
----
+
 
 ### ⚙️ Agile Methodology
 This project followed **Agile** practices using **GitHub Projects** (Kanban board).
