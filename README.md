@@ -6,6 +6,7 @@
 It enables staff to create, view, and manage incident reports while fostering collaboration through comments and reactions.
 
 🔗 **Live Site:** [https://barredlist-fae77b6e4587.herokuapp.com/](https://barredlist-fae77b6e4587.herokuapp.com/)
+<img width="1916" height="908" alt="computerdisplay-" src="https://github.com/user-attachments/assets/84c344fa-af67-48a2-aefc-a904dce82179" />
 
 ---
 
