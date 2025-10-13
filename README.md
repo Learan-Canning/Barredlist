@@ -1,6 +1,6 @@
 # 🛡️ BarredList - Professional Venue Management System
 
-<img alt="BarredList Logo" src="https://via.placeholder.com/200x100?text=BarredList+Logo" width="300">
+
 
 **BarredList** is a professional incident reporting and banned customer management system designed for venue security teams.  
 It enables staff to create, view, and manage incident reports while fostering collaboration through comments and reactions.
