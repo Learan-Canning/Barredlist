@@ -86,7 +86,7 @@ Clean, modern typography ensures readability and a professional aesthetic.
 | Warning | Yellow | `#f1c40f` |
 | Background | Light Gray | `#f8f9fa` |
 
-> _A color palette image would appear here._
+
 
 ---
 
@@ -220,11 +220,14 @@ Tested using **Google Lighthouse** for desktop & mobile.
 | Type | Tool | Status |
 |------|------|---------|
 | HTML | W3C Validator | ✅ Passed |
+
+<img width="1879" height="579" alt="html pass" src="https://github.com/user-attachments/assets/54485e7d-0546-4f68-9755-39a41087272f" />
+
+
 | CSS | W3C Validator | ✅ Passed |
-| JS | JSHint | ✅ Passed |
-| Python | PEP8 | ✅ Passed |
 
 > _Validation screenshots can be added here._
+<img width="1887" height="462" alt="css validator - `1 bootstrap error" src="https://github.com/user-attachments/assets/d26e64c1-9660-4aa3-a261-d7ec6130e027" />
 
 ---
 
@@ -239,7 +242,7 @@ Tested using **Google Lighthouse** for desktop & mobile.
 | React | Submit reaction | ✅ |
 | Pagination | Navigate pages | ✅ |
 
-> _Screenshots for each test would be added._
+
 
 ---
 
