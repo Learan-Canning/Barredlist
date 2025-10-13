@@ -288,6 +288,10 @@ python manage.py migrate
 python manage.py collectstatic
 python manage.py createsuperuser
 
+
+```
+---
+###
 # 🤖 AI Assistance in Development
 
 Throughout the development of **BarredList**, AI-powered tools were integrated to improve productivity, maintain code quality, and streamline problem-solving across the full software lifecycle.
