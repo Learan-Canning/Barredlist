@@ -49,7 +49,7 @@ It enables staff to create, view, and manage incident reports while fostering co
 ---
 
 ### 🧩 Wireframes
-<img width="771" height="635" alt="wireframes" src="https://github.com/user-attachments/assets/1241bf72-ceb5-44e7-a134-7102ad9bf751" />
+
 
 <img width="11610" height="11962" alt="New Wireframe 1" src="https://github.com/user-attachments/assets/bf669fa5-7643-4d6f-9daa-d4fda61ba59a" />
 
