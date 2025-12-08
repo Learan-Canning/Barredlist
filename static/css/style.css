@@ -2,14 +2,14 @@
 
 /* CSS Variables for Consistent Theming */
 :root {
-    --primary-color: #2c3e50;
+    --primary-color: #445261;
     --secondary-color: #e74c3c;
     --accent-color: #f39c12;
     --success-color: #27ae60;
     --warning-color: #f1c40f;
     --danger-color: #e74c3c;
     --light-color: #ecf0f1;
-    --dark-color: #34495e;
+    --dark-color: #445261;
     --white: #ffffff;
     --gray-light: #bdc3c7;
     --gray-dark: #7f8c8d;
@@ -57,48 +57,60 @@ a:hover {
 }
 
 .brand {
-    color: var(--white);
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
     font-weight: 700;
+    color: #4A4A4F;
 }
 
 .red-o {
-    color: var(--secondary-color);
+    color: #E84610;
 }
 
 .thin {
     font-weight: 300;
-    color: var(--gray-light);
-    font-size: 0.9rem;
 }
 
+/* Navbar styling */
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    margin: 0 0.2rem;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--white);
-    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
 }
 
-/* Custom navbar background to match footer */
-.navbar-primary {
-    background-color: var(--primary-color) !important;
+/* Dropdown menu alignment */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    margin-top: 0.5rem;
 }
 
-/* ===== BACKGROUND STYLES ===== */
-.main-bg {
+.dropdown-item {
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
     background-color: #f8f9fa;
-    min-height: 100vh;
 }
 
+/* Custom navbar background - ORIGINAL WORKING VERSION */
 .dark-bg {
-    background-color: var(--primary-color);
+    background-color: #445261;
 }
 
 /* ===== CARD STYLES ===== */
