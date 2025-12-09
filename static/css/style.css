@@ -99,6 +99,11 @@ a:hover {
     margin-top: 0.5rem;
 }
 
+.dropdown-menu-end {
+    right: 0 !important;
+    left: auto !important;
+}
+
 .dropdown-item {
     padding: 0.75rem 1rem;
     transition: all 0.3s ease;
@@ -106,6 +111,15 @@ a:hover {
 
 .dropdown-item:hover {
     background-color: #f8f9fa;
+}
+
+/* Mobile navbar collapse alignment */
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-collapse.collapse.show {
+    right: 0;
 }
 
 /* Custom navbar background - ORIGINAL WORKING VERSION */
@@ -188,7 +202,7 @@ a:hover {
     height: 250px;
     object-fit: cover;
     transition: var(--transition);
-}
+} ,   ,,  , ,     222dddddddddd1s1111s11111111111111111s333333333333333
 
 .image-container:hover .scale {
     transform: scale(1.05);
